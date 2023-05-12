@@ -1,0 +1,67 @@
+.widget-toc {
+    padding: 0;
+    display: block;
+    margin-bottom: 0;
+    list-style: none;
+    --widget-toc-primary-color: #5488c7;
+
+    .widget-toc__item {
+        line-height: 1.2;
+        list-style: none;
+        padding: 5px 0;
+        font-size: .9rem;
+        font-weight: 600;
+
+        .link {
+            display: block;
+            position: relative;
+            font-weight: 600;
+
+            &:hover {
+                color: var(--widget-toc-primary-color);
+            }
+
+            &:before {
+                top: 0;
+                left: 0;
+                width: 3px;
+                content: "";
+                height: 100%;
+                position: absolute;
+                background: rgba($color: #000000, $alpha: 0);
+            }
+
+            &.active {
+                color: var(--widget-toc-primary-color);
+
+                &:before {
+                    background: var(--widget-toc-primary-color);
+                }
+            }
+        }
+
+        &--level-1>a {
+            padding-left: .5rem
+        }
+
+        &--level-2>a {
+            padding-left: 1rem;
+        }
+
+        &--level-3>a {
+            padding-left: 1.75rem;
+        }
+
+        &--level-4>a {
+            padding-left: 2rem;
+        }
+
+        &--level-5>a {
+            padding-left: 2.25rem;
+        }
+
+        &--level-6>a {
+            padding-left: 2.5rem;
+        }
+    }
+}
